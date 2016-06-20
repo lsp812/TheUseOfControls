@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9532" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PHDropDownChooseToolViewCell" id="KGk-i7-Jjw" customClass="PHDropDownChooseToolViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="38"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="37.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xFX-y8-Sxi" userLabel="titleLabel">
+                        <rect key="frame" x="15" y="9" width="290" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="f1J-6Z-PPM"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mainpage_grayLine.png" translatesAutoresizingMaskIntoConstraints="NO" id="4hW-B7-1MW" userLabel="bottomLineImageView">
+                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="jSU-jt-ueg"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="jSU-jt-ueg"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="jSU-jt-ueg"/>
+                            </mask>
+                        </variation>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="4hW-B7-1MW" secondAttribute="bottom" id="04E-N9-8jr"/>
+                    <constraint firstItem="xFX-y8-Sxi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="MdG-IX-tcc"/>
+                    <constraint firstItem="4hW-B7-1MW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="SU8-Mz-x2j"/>
+                    <constraint firstAttribute="trailing" secondItem="4hW-B7-1MW" secondAttribute="trailing" id="bhu-Kr-c8s">
+                        <variation key="heightClass=regular-widthClass=compact" constant="15"/>
+                    </constraint>
+                    <constraint firstAttribute="trailing" secondItem="xFX-y8-Sxi" secondAttribute="trailing" constant="15" id="csY-zx-DYh"/>
+                    <constraint firstItem="xFX-y8-Sxi" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ie4-iM-n1J"/>
+                    <constraint firstItem="xFX-y8-Sxi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="15" id="mlL-SG-1y4"/>
+                </constraints>
+                <variation key="default">
+                    <mask key="subviews">
+                        <exclude reference="4hW-B7-1MW"/>
+                    </mask>
+                    <mask key="constraints">
+                        <exclude reference="MdG-IX-tcc"/>
+                        <exclude reference="04E-N9-8jr"/>
+                        <exclude reference="SU8-Mz-x2j"/>
+                        <exclude reference="bhu-Kr-c8s"/>
+                    </mask>
+                </variation>
+                <variation key="heightClass=regular-widthClass=compact">
+                    <mask key="subviews">
+                        <include reference="4hW-B7-1MW"/>
+                    </mask>
+                    <mask key="constraints">
+                        <include reference="04E-N9-8jr"/>
+                        <include reference="SU8-Mz-x2j"/>
+                        <include reference="bhu-Kr-c8s"/>
+                    </mask>
+                </variation>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="bottomImageLine" destination="4hW-B7-1MW" id="8XK-7d-olS"/>
+                <outlet property="titleLabel" destination="xFX-y8-Sxi" id="IEP-ue-yMB"/>
+                <outlet property="titleLabelConstraintLeftSide" destination="mlL-SG-1y4" id="vur-iv-XF4"/>
+                <outlet property="titleLabelConstraintRightSide" destination="csY-zx-DYh" id="Gbq-uH-wrl"/>
+            </connections>
+            <point key="canvasLocation" x="281" y="436"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="mainpage_grayLine.png" width="50" height="1"/>
+    </resources>
+</document>
