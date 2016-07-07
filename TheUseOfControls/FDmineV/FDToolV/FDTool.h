@@ -49,7 +49,13 @@
 +(NSString *)getDateAndWeekAndTimeForDateString:(NSString *)dataString;
 #pragma mark -- 与现在对比相隔时间
 + (int)intervalSinceNow:(NSString *)theDate;
+#pragma mark -- 比较时间大小的返回值1oneDay在将来.返回-1oneday在以前。返回0是相同的
++(int)compareOneDay:(NSDate *)oneDay withAnotherDay:(NSDate *)anotherDay;
 
 #pragma mark ---------------------------------------------------------------------------------------- 大数据二维码加密.a^b%c
 +(NSString *)encryptedDataWithjiBenString:(NSString *)jibenString andTimeString:(NSString *)timeString andPubKeyString:(NSString *)pubKeyString andSessionId:(int)sessionId;
+
+
+#pragma mark -- urlencode操作
++(NSString*)encodeString:(NSString*)unencodedString;
 @end

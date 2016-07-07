@@ -26,6 +26,8 @@
 #define CUSTOM_NetWork                   @"网络请求"
 #define CUSTOM_WebViewProgress           @"加载进度WebViewProgress"
 #define CUSTOM_areaChoose                @"省市区_地区选择"
+#define CUSTOM_wifi                      @"wifi"
+#define CUSTOM_autoConstraints           @"masonry代码适配"
 @implementation ViewController
 
 - (void)viewDidLoad {
@@ -70,6 +72,8 @@
     [self.dataArray addObject:CUSTOM_NetWork];
     [self.dataArray addObject:CUSTOM_WebViewProgress];
     [self.dataArray addObject:CUSTOM_areaChoose];
+    [self.dataArray addObject:CUSTOM_wifi];
+    [self.dataArray addObject:CUSTOM_autoConstraints];
     //
     [self createTableView];
 }
@@ -152,11 +156,18 @@
     {
         [self jumpNextViewControllerName:@"FDAddressChooseVC" andHaveXib:YES];
     }
+    else if([selectString isEqualToString:CUSTOM_wifi])
+    {
+        [self jumpNextViewControllerName:@"FDWiFiVC" andHaveXib:YES];
+    }
+    else if([selectString isEqualToString:CUSTOM_autoConstraints])
+    {
+        [self jumpNextViewControllerName:@"FDMasonryViewConroller" andHaveXib:YES];
+    }
     else
     {
         NSLog(@"nothing");
     }
-    
 }
 #pragma mark -- 跳转的地方
 -(void)jumpNextViewControllerName:(NSString *)vcName andHaveXib:(BOOL)have

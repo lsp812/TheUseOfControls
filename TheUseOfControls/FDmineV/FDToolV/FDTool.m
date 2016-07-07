@@ -242,6 +242,28 @@
     }
     return -1;
 }
+#pragma mark -- 比较时间大小的返回值1oneDay在将来.返回-1oneday在以前。返回0是相同的
++(int)compareOneDay:(NSDate *)oneDay withAnotherDay:(NSDate *)anotherDay
+{
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
+    NSString *oneDayStr = [dateFormatter stringFromDate:oneDay];
+    NSString *anotherDayStr = [dateFormatter stringFromDate:anotherDay];
+    NSDate *dateA = [dateFormatter dateFromString:oneDayStr];
+    NSDate *dateB = [dateFormatter dateFromString:anotherDayStr];
+    NSComparisonResult result = [dateA compare:dateB];
+    //    NSLog(@"date1 : %@, date2 : %@", oneDay, anotherDay);
+    if (result == NSOrderedDescending) {
+        //NSLog(@"Date1  is in the future");
+        return 1;
+    }
+    else if (result == NSOrderedAscending){
+        //NSLog(@"Date1 is in the past");
+        return -1;
+    }
+    //NSLog(@"Both dates are the same");
+    return 0;
+}
 #pragma mark ---------------------------------------------------------------------------------------- 大数据二维码加密.a^b%c
 +(NSString *)encryptedDataWithjiBenString:(NSString *)jibenString andTimeString:(NSString *)timeString andPubKeyString:(NSString *)pubKeyString andSessionId:(int)sessionId
 {
@@ -297,5 +319,25 @@
     resultBase = [resultBase stringByAppendingFormat:@"%@",jibenPart2];
     resultBase = [resultBase stringByAppendingFormat:@"|%@",sessionIdString];
     return resultBase;
+}
+
+#pragma mark -- urlencode操作
++(NSString*)encodeString:(NSString*)unencodedString
+{
+    // CharactersToBeEscaped = @":/?&=;+!@#$()~',*";
+    // CharactersToLeaveUnescaped = @"[].";
+    NSString *encodedString = (NSString *)
+    
+    CFBridgingRelease(CFURLCreateStringByAddingPercentEscapes(kCFAllocatorDefault,
+                                                              
+                                                              (CFStringRef)unencodedString,
+                                                              
+                                                              NULL,
+                                                              
+                                                              (CFStringRef)@"!*'();:@&=+$,/?%#[]",
+                                                              
+                                                              kCFStringEncodingUTF8));
+    
+    return encodedString;
 }
 @end
