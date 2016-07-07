@@ -91,19 +91,6 @@
         make.bottom.mas_equalTo(view_01.mas_bottom).offset(-20);
     }];
     //
-//    UIView *view_03 = [[UIView alloc]init];
-//    [view_03 setBackgroundColor:[UIColor yellowColor]];
-//    [self.view addSubview:view_03];
-//    [view_03 mas_makeConstraints:^(MASConstraintMaker *make) {
-//        make.top.mas_equalTo(view_02.mas_top).offset(20);
-////        make.left.mas_equalTo(view_02.mas_left).offset(20);
-//        make.left.mas_offset(50);
-////        make.right.mas_equalTo(view_02.mas_right).offset(-20);
-////        make.right.mas_greaterThanOrEqualTo(view_02.mas_right).offset(-20);
-////        make.right.mas_lessThanOrEqualTo(view_02.mas_right).offset(-20);
-//        make.bottom.mas_equalTo(view_02.mas_bottom).offset(-20);
-//    }];
-//    //
     int padding1 = 10;
     UIView *sv2 = [[UIView alloc]init];
     sv2.backgroundColor = [UIColor greenColor];
@@ -117,7 +104,8 @@
         make.top.equalTo(view_02.mas_top);
         make.left.equalTo(view_02.mas_left).offset(padding1);
         make.right.equalTo(sv3.mas_left).offset(-padding1);
-        make.height.mas_equalTo(@150);
+//        make.height.mas_equalTo(@150);
+        make.height.equalTo(@150);
         make.width.equalTo(sv3);
     }];
     //
@@ -127,8 +115,47 @@
         make.right.equalTo(view_02.mas_right).offset(-padding1);
         make.height.mas_equalTo(@150);
         make.width.equalTo(sv2);
+        //
     }];
     //
+    UIView *view_03 = [[UIView alloc]init];
+    view_03.backgroundColor = [UIColor purpleColor];
+    [self.view addSubview:view_03];
+    [view_03 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_offset(260);
+        make.left.mas_offset(50);
+        make.width.mas_offset(120);
+        make.height.mas_offset(50);
+    }];
+    //
+    UIView *view_04 = [[UIView alloc]init];
+    view_04.backgroundColor = [UIColor yellowColor];
+    [self.view addSubview:view_04];
+    [view_04 mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_greaterThanOrEqualTo(view_03.mas_bottom);
+//        make.top.mas_equalTo(view_03.mas_bottom).offset(10);
+//        make.top.mas_lessThanOrEqualTo(view_03.mas_bottom);
+//        make.left.mas_offset(50);
+//        make.right.mas_lessThanOrEqualTo(view_02.mas_right).offset(-10);
+        make.right.mas_equalTo(view_02.mas_right).offset(-10);
+//        make.width.mas_offset(120);
+        make.left.mas_lessThanOrEqualTo(view_03.mas_right).offset(10);
+//        make.left.mas_greaterThanOrEqualTo(view_03.mas_right).offset(10);
+//        make.left.mas_equalTo(view_03.mas_right).offset(10);
+        make.height.mas_offset(80);
+    }];
+    ///////////////////////////修改约束条件
+    [view_02 mas_updateConstraints:^(MASConstraintMaker *make) {
+          make.left.mas_equalTo(view_01.mas_left).offset(10);
+    }];
+    ///
+    [view_02 mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(view_01.mas_top).offset(20);
+        make.left.mas_equalTo(view_01.mas_left).offset(20);
+        make.right.mas_equalTo(view_01.mas_right).offset(-30);
+        make.bottom.mas_equalTo(view_01.mas_bottom).offset(-40);
+    }];
+    
 }
 
 @end
