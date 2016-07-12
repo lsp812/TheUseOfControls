@@ -8,6 +8,8 @@
 
 #import "FDMasonryViewConroller.h"
 #import "Masonry.h"
+
+
 @interface FDMasonryViewConroller ()
 
 @end
@@ -155,7 +157,6 @@
         make.right.mas_equalTo(view_01.mas_right).offset(-30);
         make.bottom.mas_equalTo(view_01.mas_bottom).offset(-40);
     }];
-    
 }
 
 @end

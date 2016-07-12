@@ -28,6 +28,7 @@
 #define CUSTOM_areaChoose                @"省市区_地区选择"
 #define CUSTOM_wifi                      @"wifi"
 #define CUSTOM_autoConstraints           @"masonry代码适配"
+#define CUSTOM_wkWebView                 @"wkWebView"
 @implementation ViewController
 
 - (void)viewDidLoad {
@@ -74,6 +75,7 @@
     [self.dataArray addObject:CUSTOM_areaChoose];
     [self.dataArray addObject:CUSTOM_wifi];
     [self.dataArray addObject:CUSTOM_autoConstraints];
+    [self.dataArray addObject:CUSTOM_wkWebView];
     //
     [self createTableView];
 }
@@ -163,6 +165,10 @@
     else if([selectString isEqualToString:CUSTOM_autoConstraints])
     {
         [self jumpNextViewControllerName:@"FDMasonryViewConroller" andHaveXib:YES];
+    }
+    else if([selectString isEqualToString:CUSTOM_wkWebView])
+    {
+        [self jumpNextViewControllerName:@"FDWKWebViewController" andHaveXib:YES];
     }
     else
     {

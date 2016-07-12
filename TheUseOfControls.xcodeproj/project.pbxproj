@@ -20,6 +20,8 @@
 		B33C5F421D2A6CF7006760CD /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B33C5F341D2A6CF7006760CD /* NSLayoutConstraint+MASDebugAdditions.m */; };
 		B33C5F431D2A6CF7006760CD /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B33C5F361D2A6CF7006760CD /* View+MASAdditions.m */; };
 		B33C5F441D2A6CF7006760CD /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B33C5F391D2A6CF7006760CD /* ViewController+MASAdditions.m */; };
+		B37394161D34E05C00CA3D17 /* FDWKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B37394141D34E05C00CA3D17 /* FDWKWebViewController.m */; };
+		B37394171D34E05C00CA3D17 /* FDWKWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B37394151D34E05C00CA3D17 /* FDWKWebViewController.xib */; };
 		B3829A601CFBCDEE00205662 /* NJKWebViewProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = B3829A5D1CFBCDEE00205662 /* NJKWebViewProgress.m */; };
 		B3829A611CFBCDEE00205662 /* NJKWebViewProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = B3829A5F1CFBCDEE00205662 /* NJKWebViewProgressView.m */; };
 		B3829A671CFBDB9100205662 /* FDWebManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B3829A661CFBDB9100205662 /* FDWebManager.m */; };
@@ -172,6 +174,9 @@
 		B33C5F371D2A6CF7006760CD /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
 		B33C5F381D2A6CF7006760CD /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
 		B33C5F391D2A6CF7006760CD /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
+		B37394131D34E05C00CA3D17 /* FDWKWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDWKWebViewController.h; sourceTree = "<group>"; };
+		B37394141D34E05C00CA3D17 /* FDWKWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDWKWebViewController.m; sourceTree = "<group>"; };
+		B37394151D34E05C00CA3D17 /* FDWKWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FDWKWebViewController.xib; sourceTree = "<group>"; };
 		B3829A5C1CFBCDEE00205662 /* NJKWebViewProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJKWebViewProgress.h; sourceTree = "<group>"; };
 		B3829A5D1CFBCDEE00205662 /* NJKWebViewProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NJKWebViewProgress.m; sourceTree = "<group>"; };
 		B3829A5E1CFBCDEE00205662 /* NJKWebViewProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NJKWebViewProgressView.h; sourceTree = "<group>"; };
@@ -419,6 +424,16 @@
 			path = Masonry;
 			sourceTree = "<group>";
 		};
+		B37394121D34E03200CA3D17 /* FDWKWebViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B37394131D34E05C00CA3D17 /* FDWKWebViewController.h */,
+				B37394141D34E05C00CA3D17 /* FDWKWebViewController.m */,
+				B37394151D34E05C00CA3D17 /* FDWKWebViewController.xib */,
+			);
+			path = FDWKWebViewController;
+			sourceTree = "<group>";
+		};
 		B3829A5B1CFBCDEE00205662 /* NJKWebViewProgress */ = {
 			isa = PBXGroup;
 			children = (
@@ -609,6 +624,7 @@
 		B38CBF1D1CF9801700B2B1FC /* FDmineVC */ = {
 			isa = PBXGroup;
 			children = (
+				B37394121D34E03200CA3D17 /* FDWKWebViewController */,
 				B33C5F191D2A695E006760CD /* FDMasonryViewConroller */,
 				B3E2584B1D191AD200B905AE /* FDWiFi */,
 				B38CBF1E1CF9801700B2B1FC /* FDAddressChooseVC */,
@@ -1112,6 +1128,7 @@
 				B39502FD1CF8486E0084B5F7 /* shuffingImage5.png in Resources */,
 				B38CBF821CF9803A00B2B1FC /* PHMainBannerCell.xib in Resources */,
 				B38CBF591CF9801700B2B1FC /* FDDropDownListVC.xib in Resources */,
+				B37394171D34E05C00CA3D17 /* FDWKWebViewController.xib in Resources */,
 				B39503021CF84D160084B5F7 /* mainpage_shuffings_selected@2x.png in Resources */,
 				B3E258501D191AF500B905AE /* FDWiFiVC.xib in Resources */,
 				B3829AC01CFC364300205662 /* ph_gongfu4.png in Resources */,
@@ -1195,6 +1212,7 @@
 				B3829AA31CFC143A00205662 /* UIView+Extension.m in Sources */,
 				B38CBF611CF9801700B2B1FC /* FDScrolInfiniteLoopVC.m in Sources */,
 				B38CBF691CF9801700B2B1FC /* FDWebViewController.m in Sources */,
+				B37394161D34E05C00CA3D17 /* FDWKWebViewController.m in Sources */,
 				B388933F1CF3FACF00E57E63 /* AppDelegate.m in Sources */,
 				B3829A7C1CFBE73800205662 /* FMDatabasePool.m in Sources */,
 				B38CBFD51CF9805E00B2B1FC /* tommath.c in Sources */,
