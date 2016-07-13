@@ -42,7 +42,6 @@
     [webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:string]]];
     [self.view addSubview:webView];
     //
-    
 }
 
 #pragma mark -- WKNavigationDelegate

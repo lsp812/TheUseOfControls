@@ -121,6 +121,8 @@
 		B39502FE1CF8486E0084B5F7 /* shuffingImage4.png in Resources */ = {isa = PBXBuildFile; fileRef = B39502F91CF8486E0084B5F7 /* shuffingImage4.png */; };
 		B39503021CF84D160084B5F7 /* mainpage_shuffings_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B39503001CF84D160084B5F7 /* mainpage_shuffings_selected@2x.png */; };
 		B39503031CF84D160084B5F7 /* mainpage_shuffings_unselected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = B39503011CF84D160084B5F7 /* mainpage_shuffings_unselected@2x.png */; };
+		B395E6FE1D362FF000AD193A /* FDTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B395E6FC1D362FF000AD193A /* FDTestViewController.m */; };
+		B395E6FF1D362FF000AD193A /* FDTestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B395E6FD1D362FF000AD193A /* FDTestViewController.xib */; };
 		B3E2584F1D191AF500B905AE /* FDWiFiVC.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E2584D1D191AF500B905AE /* FDWiFiVC.m */; };
 		B3E258501D191AF500B905AE /* FDWiFiVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3E2584E1D191AF500B905AE /* FDWiFiVC.xib */; };
 		B3E258531D191C8900B905AE /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B3E258521D191C8900B905AE /* SystemConfiguration.framework */; };
@@ -343,6 +345,9 @@
 		B39502F91CF8486E0084B5F7 /* shuffingImage4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shuffingImage4.png; sourceTree = "<group>"; };
 		B39503001CF84D160084B5F7 /* mainpage_shuffings_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mainpage_shuffings_selected@2x.png"; sourceTree = "<group>"; };
 		B39503011CF84D160084B5F7 /* mainpage_shuffings_unselected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "mainpage_shuffings_unselected@2x.png"; sourceTree = "<group>"; };
+		B395E6FB1D362FF000AD193A /* FDTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDTestViewController.h; sourceTree = "<group>"; };
+		B395E6FC1D362FF000AD193A /* FDTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDTestViewController.m; sourceTree = "<group>"; };
+		B395E6FD1D362FF000AD193A /* FDTestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FDTestViewController.xib; sourceTree = "<group>"; };
 		B3E2584C1D191AF500B905AE /* FDWiFiVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FDWiFiVC.h; sourceTree = "<group>"; };
 		B3E2584D1D191AF500B905AE /* FDWiFiVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FDWiFiVC.m; sourceTree = "<group>"; };
 		B3E2584E1D191AF500B905AE /* FDWiFiVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FDWiFiVC.xib; sourceTree = "<group>"; };
@@ -624,6 +629,7 @@
 		B38CBF1D1CF9801700B2B1FC /* FDmineVC */ = {
 			isa = PBXGroup;
 			children = (
+				B395E6FA1D362FD700AD193A /* FDTestViewController */,
 				B37394121D34E03200CA3D17 /* FDWKWebViewController */,
 				B33C5F191D2A695E006760CD /* FDMasonryViewConroller */,
 				B3E2584B1D191AD200B905AE /* FDWiFi */,
@@ -988,6 +994,16 @@
 			path = FDImages;
 			sourceTree = "<group>";
 		};
+		B395E6FA1D362FD700AD193A /* FDTestViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B395E6FB1D362FF000AD193A /* FDTestViewController.h */,
+				B395E6FC1D362FF000AD193A /* FDTestViewController.m */,
+				B395E6FD1D362FF000AD193A /* FDTestViewController.xib */,
+			);
+			path = FDTestViewController;
+			sourceTree = "<group>";
+		};
 		B3E2584B1D191AD200B905AE /* FDWiFi */ = {
 			isa = PBXGroup;
 			children = (
@@ -1134,6 +1150,7 @@
 				B3829AC01CFC364300205662 /* ph_gongfu4.png in Resources */,
 				B39502FE1CF8486E0084B5F7 /* shuffingImage4.png in Resources */,
 				B3829ABF1CFC364300205662 /* ph_gongfu3.png in Resources */,
+				B395E6FF1D362FF000AD193A /* FDTestViewController.xib in Resources */,
 				B39503031CF84D160084B5F7 /* mainpage_shuffings_unselected@2x.png in Resources */,
 				B38CBF531CF9801700B2B1FC /* FDAddressChooseVC.xib in Resources */,
 				B38CBF5D1CF9801700B2B1FC /* FDMacroDefinitionVC.xib in Resources */,
@@ -1205,6 +1222,7 @@
 				B38CBFD91CF9805E00B2B1FC /* PHDropDownChooseToolViewCell.m in Sources */,
 				B38CBF7E1CF9803900B2B1FC /* CollectionCell.m in Sources */,
 				B33C5F411D2A6CF7006760CD /* NSArray+MASAdditions.m in Sources */,
+				B395E6FE1D362FF000AD193A /* FDTestViewController.m in Sources */,
 				B33C5F1D1D2A6975006760CD /* FDMasonryViewConroller.m in Sources */,
 				B3829AA21CFC143A00205662 /* UIScrollView+MJRefresh.m in Sources */,
 				B38CBF631CF9801700B2B1FC /* FDTableViewInfiniteLoopVC.m in Sources */,

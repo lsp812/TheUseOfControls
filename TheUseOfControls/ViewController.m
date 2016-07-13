@@ -13,6 +13,7 @@
 @property (strong, nonatomic) UITableView *tableV;//列表
 @end
 
+#define CUSTOM_Test                      @"test"
 #define CUSTOM_UIScrollview_InfiniteLoop @"无限滚动的UIScrollView"
 #define CUSTOM_UITableView_InfiniteLoop  @"无限滚动的UITableView"
 #define CUSTOM_Refresh_UITableView       @"下拉刷新和上提加载"
@@ -60,6 +61,7 @@
     self.dataArray = [NSMutableArray array];
     [self.dataArray removeAllObjects];
     //
+    [self.dataArray addObject:CUSTOM_Test];
     [self.dataArray addObject:CUSTOM_UIScrollview_InfiniteLoop];
     [self.dataArray addObject:CUSTOM_UITableView_InfiniteLoop];
     [self.dataArray addObject:CUSTOM_Refresh_UITableView];
@@ -169,6 +171,10 @@
     else if([selectString isEqualToString:CUSTOM_wkWebView])
     {
         [self jumpNextViewControllerName:@"FDWKWebViewController" andHaveXib:YES];
+    }
+    else if([selectString isEqualToString:CUSTOM_Test])
+    {
+        [self jumpNextViewControllerName:@"FDTestViewController" andHaveXib:YES];
     }
     else
     {
